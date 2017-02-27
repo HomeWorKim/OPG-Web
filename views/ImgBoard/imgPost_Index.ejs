@@ -4,7 +4,7 @@
     <%- include ../partials/head.ejs %>
     <link rel="stylesheet" href="/stylesheets/photoStyle.css">
     <link rel="stylesheet" href="/stylesheets/text.css">
-    <%- include photofunc.ejs %>
+    <%- include imgPost_Func.ejs %>
     <script>
       $(document).ready(function(){
         $('li.disabled>a').on('click',function(e){
@@ -49,7 +49,6 @@
                   </div>
               </div>
               <div class="col-xs-12"></div>
-
               <div class="row mainText">
                <div class="cc">
                  <ul id="blog" class="blog ibw">
@@ -58,7 +57,7 @@
                       <a href="/<%=path%>/<%= e._id%>?page=<%=page%>">
                      <div class="ibw">
                        <div class="item_image iw ib">
-                         <img src="<%=getimgsrc(e) %>" alt="">
+                         <img src="<%=getimgsrc(e)%>" alt="">
                        </div>
                        <div class="item_details ib fs">
                          <div class="item_header"><%=e.title%></div>

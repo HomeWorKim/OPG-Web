@@ -4,7 +4,7 @@
     <%- include ../partials/head.ejs %>
     <link rel="stylesheet" href="/stylesheets/photoStyle.css">
     <link rel="stylesheet" href="/stylesheets/view.css">
-    <%- include photofunc.ejs %>
+    <%- include imgPost_Func.ejs %>
     <%- include ../partials/inc_summernote.ejs %>
   </head>
   <body>
@@ -43,14 +43,7 @@
         <%= data.updatedAt.toLocaleTimeString() %>
       </div>
     <% } %>
-    <% for(var index in viewallimg(data)){
-      console.log(viewallimg(data)[index]);%>
-      <div class="col-xs-12">
-          <img class="img-responsive img-thumbnail" src="<%=viewallimg(data)[index]%>" >
-      </div>
-    <% } %>
     <div class="col-xs-12 panel panel-default" id="body"></div>
-
     <% if(data.filePath != undefined) { %>
       <div><a href="<%=getfilepath(data)%>" download><%=data.fileOriginalname%></a></div>
     <% } %>
